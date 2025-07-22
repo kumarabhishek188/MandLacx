@@ -1,63 +1,92 @@
 # Mandlacx Studio
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
 A modern surveillance dashboard built with Next.js, React, and Tailwind CSS. Features include:
 
-- Responsive Navbar with logo and navigation icons
-- Incident list with color-coded event tags
-- Interactive timeline with camera events and video controls
-- Optimized image loading using Next.js Image component
+- Responsive Navbar with logo and navigation icons  
+- Incident list with color-coded event tags  
+- Interactive timeline with camera events and video controls  
+- Optimized image loading using Next.js Image component  
+
+## 🚀 Deployment
+
+Here is the deployed project:  
+👉 [https://mand-lacx.vercel.app/](https://mand-lacx.vercel.app/) 
+
 
 ## Getting Started
 
-1. Install dependencies:
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/kumarabhishek188/MandLacx.git
+   cd MandLacx
+   ```
+
+2. Install dependencies:
 
    ```bash
    npm install
    ```
 
-2. Run the development server:
+3. Run the development server:
 
    ```bash
    npm run dev
    # or
    yarn dev
-   # or
-   pnpm dev
-   # or
-   bun dev
    ```
 
 3. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## Project Structure
+```
+studio/
+├── public/                     # Static assets (logo, icons, images)
+├── src/
+│   ├── app/                    # App entry point, layout, global styles
+│   └── components/             # Reusable UI components
+│       ├── Navbar.tsx
+│       ├── Timeline.tsx
+│       ├── EventTag.tsx
+│       ├── IncidentList.tsx
+│       └── IncidentPlayer.tsx
+├── styles/                     # Tailwind and global styles
+├── .eslintrc.js                # ESLint configuration
+├── next.config.js              # Next.js configuration
+├── tailwind.config.js          # Tailwind CSS configuration
+└── README.md
 
-- `src/components/` — UI components (Navbar, IncidentList, Timeline, etc.)
+
+- `src/components/` — UI components (Navbar, IncidentList, Timeline, IncidentPlayer, EventTag)
 - `public/` — Static assets (images, logo, icons)
 - `src/app/` — App entry and global styles
+```
 
-## Customization
+## 🧠 Tech Decisions:
+- Next.js – Chosen for file-based routing, SSR/SSG, and Vercel integration.
 
-- Update the logo in `public/logo.png`.
-- Add or modify incidents and camera events in the respective components.
-- Adjust styles using Tailwind CSS classes.
+- React – Declarative, component-based structure makes it ideal for dynamic UIs.
 
-## Learn More
+- Tailwind CSS – Utility-first styling for fast development and consistent design.
 
-To learn more about Next.js, take a look at the following resources:
+- TypeScript – Adds type safety and better developer tooling.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Vercel – Smoothest deployment experience for Next.js apps.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## License
+## 🌱 Future Improvements:
+- 🔄 Real-time video stream integration (WebRTC)
 
-MIT
+- 🔍 Event filtering by type, camera, or severity
 
-## Deploy on Vercel
+- 🔐 Authentication and role-based permissions
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- 📡 Show camera online/offline status
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- 📁 Download/export event logs
+
+- 🌙 Dark/Light theme toggle
+
+- 📱 Better mobile UX with touch-friendly timeline
+
+- 🔔 Push alerts for critical events
